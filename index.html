@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahariya Alam Sabbir — Full-Stack Developer & Competitive Programmer</title>
+<meta name="description" content="Portfolio of Shahariya Alam Sabbir, final-year CSE student at BAIUST building full-stack JavaScript applications and solving competitive programming problems in C++.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ TAB BAR NAV ============ -->
+<header class="tabbar">
+  <div class="tabbar-inner">
+    <div class="tabbar-brand">
+      <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+      <span class="brand-path">~/sabbir</span>
+    </div>
+    <button class="tab-toggle" id="tabToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="tabs" id="tabs">
+      <a class="tab" href="#hero"><span class="tab-name">home</span><span class="tab-ext">.js</span></a>
+      <a class="tab" href="#about"><span class="tab-name">about</span><span class="tab-ext">.js</span></a>
+      <a class="tab" href="#skills"><span class="tab-name">skills</span><span class="tab-ext">.json</span></a>
+      <a class="tab" href="#projects"><span class="tab-name">projects</span><span class="tab-ext">.js</span></a>
+      <a class="tab" href="#cp"><span class="tab-name">cp-stats</span><span class="tab-ext">.log</span></a>
+      <a class="tab" href="#contact"><span class="tab-name">contact</span><span class="tab-ext">.sh</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="panel hero-panel">
+    <div class="panel-head">
+      <span class="panel-file">home.js</span>
+      <span class="panel-status"><span class="status-pulse"></span>online — open to opportunities</span>
+    </div>
+    <div class="code-block hero-code">
+      <pre><code><span class="ln">1</span><span class="tok-com">// full-stack developer & competitive programmer</span>
+<span class="ln">2</span><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
+<span class="ln">3</span>  <span class="tok-prop">name</span>: <span class="tok-str">"Shahariya Alam Sabbir"</span>,
+<span class="ln">4</span>  <span class="tok-prop">based_in</span>: <span class="tok-str">"Cumilla, Bangladesh"</span>,
+<span class="ln">5</span>  <span class="tok-prop">studying</span>: <span class="tok-str">"BSc in CSE, BAIUST"</span>,
+<span class="ln">6</span>  <span class="tok-prop">stack</span>: [<span class="tok-str">"React"</span>, <span class="tok-str">"Node.js"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"MongoDB"</span>],
+<span class="ln">7</span>  <span class="tok-prop">languages</span>: [<span class="tok-str">"C++"</span>, <span class="tok-str">"JavaScript"</span>],
+<span class="ln">8</span>  <span class="tok-prop">currentFocus</span>: <span class="tok-str" id="typedFocus"></span><span class="cursor">|</span>
+<span class="ln">9</span>};</code></pre>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">view_projects()</a>
+      <a href="resume.pdf" download class="btn btn-ghost" id="resumeBtn">download_resume()</a>
+      <a href="https://github.com/shahariyasabbir" target="_blank" rel="noopener" class="btn btn-ghost">open_github()</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">problems solved</span></div>
+      <div class="stat"><span class="stat-num">754</span><span class="stat-label">max Codeforces rating</span></div>
+      <div class="stat"><span class="stat-num">7th–8th</span><span class="stat-label">semester, BAIUST</span></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">about.js</span>
+      <span class="panel-status">4 sections</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="lead">I'm a final-year Computer Science and Engineering student at BAIUST, splitting my time between building full-stack JavaScript applications and grinding competitive programming problems in C++.</p>
+        <p>On the web side, I work across the stack — React and Vite on the frontend styled with Tailwind CSS, and Node.js, Express and MongoDB on the backend, usually with Mongoose handling the data layer. I like projects that force me to touch every layer: auth, schema design, API routes and the UI that consumes them.</p>
+        <p>Outside of coursework, I'm currently working on <strong>FedDRL-IDS</strong>, a capstone thesis combining Federated Learning and Deep Reinforcement Learning for network intrusion detection — training PPO agents with FedAvg/FedProx over the CICIDS2017 dataset.</p>
+        <p>C++ stays my primary language for problem solving: I'm currently deep in STL structures — <code>map</code>, <code>set</code>, <code>unordered_set</code>, <code>pair</code>, <code>stringstream</code> — plus grid-traversal and stack/queue/deque problems.</p>
+      </div>
+      <aside class="about-card">
+        <dl class="info-list">
+          <div class="info-row"><dt>university</dt><dd>BAIUST</dd></div>
+          <div class="info-row"><dt>degree</dt><dd>BSc CSE, 2023–2027</dd></div>
+          <div class="info-row"><dt>status</dt><dd>Final year (7th–8th sem)</dd></div>
+          <div class="info-row"><dt>cgpa</dt><dd>~3.41 / 4.00</dd></div>
+          <div class="info-row"><dt>location</dt><dd>Cumilla, Bangladesh</dd></div>
+          <div class="info-row"><dt>github</dt><dd><a href="https://github.com/shahariyasabbir" target="_blank" rel="noopener">shahariyasabbir</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">skills.json</span>
+      <span class="panel-status">4 categories</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3><span class="brace">{</span> frontend <span class="brace">}</span></h3>
+        <ul class="chip-list">
+          <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>HTML / CSS</li><li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3><span class="brace">{</span> backend <span class="brace">}</span></h3>
+        <ul class="chip-list">
+          <li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>Mongoose</li><li>REST API</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3><span class="brace">{</span> languages <span class="brace">}</span></h3>
+        <ul class="chip-list">
+          <li>C++</li><li>JavaScript</li><li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3><span class="brace">{</span> tools <span class="brace">}</span></h3>
+        <ul class="chip-list">
+          <li>Git / GitHub</li><li>VS Code</li><li>MongoDB Atlas</li><li>Vercel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">projects.js</span>
+      <span class="panel-status">6 entries</span>
+    </div>
+    <div class="project-list">
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>FedDRL-IDS</h3>
+          <span class="project-tag-featured">capstone thesis</span>
+        </div>
+        <p>A four-member research thesis combining Federated Learning with Deep Reinforcement Learning for network intrusion detection — FedAvg/FedProx paired with PPO agents, trained on the CICIDS2017 dataset with non-IID data partitioning across clients.</p>
+        <ul class="project-tags"><li>Python</li><li>PyTorch</li><li>Federated Learning</li><li>Reinforcement Learning</li></ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>REAL STATE (Real-Estate Junction)</h3>
+          <span class="project-tag-featured">team leader</span>
+        </div>
+        <p>A full-stack real estate platform connecting buyers, sellers, and agents — property listings with images and pricing, advanced search and filtering, saved properties, inquiry management, an agent dashboard, and role-based access control for Admin, Agent, and User. Led the team through planning, build, and delivery in one month.</p>
+        <ul class="project-tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>RBAC</li></ul>
+        <a class="project-link" href="#" data-pending-link="true">[ add repo link ]</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Boyss Bride <span class="project-alt-name">(matrimony platform)</span></h3>
+        </div>
+        <p>A personal full-stack matrimony platform for finding compatible partners based on personal, educational, and family preferences — profile management, match search and filtering, interest requests, connection management, messaging, and a member dashboard.</p>
+        <ul class="project-tags"><li>React</li><li>Vite</li><li>Tailwind CSS</li></ul>
+        <a class="project-link" href="https://github.com/shahariyasabbir/matrimony" target="_blank" rel="noopener">github.com/shahariyasabbir/matrimony</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Brillance</h3>
+        </div>
+        <p>A contract billing landing page, originally static, rebuilt as a componentized React application for easier maintenance and reuse.</p>
+        <ul class="project-tags"><li>React</li><li>JavaScript</li></ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>E-Commerce Admin Panel</h3>
+        </div>
+        <p>An admin dashboard for managing an online store — products, orders and users — backed by a Node.js/Express API with MongoDB and Mongoose schemas, plus CRUD flows end to end.</p>
+        <ul class="project-tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Mongoose</li></ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <h3>Run to the Masjid</h3>
+        </div>
+        <p>An Islamic-themed browser game built in React, exploring simple game-loop mechanics and state management outside of typical CRUD apps.</p>
+        <ul class="project-tags"><li>React</li><li>JavaScript</li></ul>
+      </article>
+
+    </div>
+    <p class="projects-note">Couldn't find a matching repo for REAL STATE on your GitHub — if it's under a teammate's account or a different repo name, send the link over and I'll wire it in. The rest of your repos are at <a href="https://github.com/shahariyasabbir" target="_blank" rel="noopener">github.com/shahariyasabbir</a>.</p>
+  </section>
+
+  <!-- ============ COMPETITIVE PROGRAMMING ============ -->
+  <section id="cp" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">cp-stats.log</span>
+      <span class="panel-status">live-ish</span>
+    </div>
+    <div class="cp-grid">
+      <div class="cp-card">
+        <a class="cp-platform" href="https://codeforces.com/profile/sabbir04" target="_blank" rel="noopener">Codeforces ↗</a>
+        <span class="cp-rating">335</span>
+        <span class="cp-sub">current rating &middot; max 754</span>
+      </div>
+      <div class="cp-card">
+        <a class="cp-platform" href="https://www.codechef.com/users/sabbir04" target="_blank" rel="noopener">CodeChef ↗</a>
+        <span class="cp-rating">1245</span>
+        <span class="cp-sub">current rating &middot; 2-star</span>
+      </div>
+      <div class="cp-card">
+        <a class="cp-platform" href="https://leetcode.com/u/sabbir101004/" target="_blank" rel="noopener">LeetCode ↗</a>
+        <span class="cp-rating">—</span>
+        <span class="cp-sub">profile</span>
+      </div>
+      <div class="cp-card">
+        <span class="cp-platform">Problems solved</span>
+        <span class="cp-rating">500+</span>
+        <span class="cp-sub">across Codeforces, CodeChef & LeetCode</span>
+      </div>
+    </div>
+    <p class="cp-note">Recent practice has centered on STL containers (map, set, unordered_set, pair, stringstream), grid-traversal problems, and stack/queue/deque patterns.</p>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">contact.sh</span>
+      <span class="panel-status">awaiting input</span>
+    </div>
+    <div class="terminal">
+      <div class="terminal-line"><span class="prompt">$</span> ./reach_out.sh --preferred github</div>
+      <div class="terminal-line output">→ opening https://github.com/shahariyasabbir</div>
+      <div class="terminal-line"><span class="prompt">$</span> cat contact_methods.txt</div>
+      <div class="terminal-line output">
+        <a href="https://github.com/shahariyasabbir" target="_blank" rel="noopener">github.com/shahariyasabbir</a><br>
+        <a href="https://www.linkedin.com/in/shahariyaalam/" target="_blank" rel="noopener">linkedin.com/in/shahariyaalam</a><br>
+        <a href="mailto:ahanafsabbir83@gmail.com">ahanafsabbir83@gmail.com</a><br>
+        <a href="tel:+8801729006015">01729006015</a><br>
+        <a href="https://leetcode.com/u/sabbir101004/" target="_blank" rel="noopener">leetcode.com/u/sabbir101004</a><br>
+        <a href="https://www.codechef.com/users/sabbir04" target="_blank" rel="noopener">codechef.com/users/sabbir04</a><br>
+        <a href="https://codeforces.com/profile/sabbir04" target="_blank" rel="noopener">codeforces.com/profile/sabbir04</a>
+      </div>
+      <div class="terminal-line"><span class="prompt">$</span> <span class="cursor">|</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Shahariya Alam Sabbir · BAIUST, Bangladesh</span>
+  <a href="#hero">↑ back to top</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
