@@ -35,9 +35,10 @@ body{
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-a{ color: var(--accent-blue); text-decoration: none; }
+a{ color: var(--accent-blue); text-decoration: none; overflow-wrap: anywhere; }
 a:hover{ text-decoration: underline; }
 
 code{ font-family: var(--mono); }
@@ -283,6 +284,103 @@ main{ max-width: 1040px; margin: 0 auto; padding: 40px 20px 20px; }
 .info-row dd{ margin:0; color: var(--text); text-align: right; }
 
 /* ============================================================
+   Experience
+   ============================================================ */
+.experience-card{
+  padding: 22px 24px 24px;
+}
+.experience-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 18px;
+}
+.experience-top h3{
+  margin:0;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.experience-company{
+  margin: 3px 0 0;
+  color: var(--accent-purple);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+.experience-dates,
+.experience-location{
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.experience-dates{ white-space: nowrap; }
+.experience-location{ margin: 14px 0 10px; }
+.experience-description{
+  color: var(--text-muted);
+  margin: 0 0 14px;
+  max-width: 75ch;
+}
+.experience-proof{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent-blue);
+}
+
+/* ============================================================
+   Certifications
+   ============================================================ */
+.certifications-list{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.certification-card{
+  background: var(--panel);
+  padding: 20px 22px;
+}
+.certification-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 16px;
+}
+.certification-type,
+.certification-date{
+  color: var(--accent-gold);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+.certification-card h3{
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+.certification-date{
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.certification-issuer{
+  color: var(--text-muted);
+  margin: 8px 0 12px;
+}
+.certification-proof{
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.certifications-empty{
+  padding: 28px 24px;
+  color: var(--text-muted);
+}
+.certifications-empty p{
+  margin: 0 0 6px;
+  color: var(--text);
+}
+.certifications-empty span{
+  font-size: 0.85rem;
+}
+
+/* ============================================================
    Skills
    ============================================================ */
 .skills-grid{
@@ -458,16 +556,26 @@ a.cp-platform:hover{ color: var(--accent-blue); text-decoration: none; }
    Responsive
    ============================================================ */
 @media (max-width: 760px){
+  main{ padding: 28px 14px 14px; }
+  .panel{ margin-bottom: 20px; }
   .about-grid{ grid-template-columns: 1fr; }
   .about-card{ border-left:none; border-top:1px solid var(--border); }
+  .experience-top{ flex-direction: column; gap: 4px; }
+  .certifications-list{ grid-template-columns: 1fr; }
   .skills-grid{ grid-template-columns: 1fr; }
   .cp-grid{ grid-template-columns: 1fr 1fr; }
   .hero-stats{ flex-direction: column; }
   .stat{ border-right:none; border-bottom:1px solid var(--border); }
   .stat:last-child{ border-bottom:none; }
+  .project-card{ padding: 18px 16px; }
+  .projects-note,
+  .cp-note{ padding-left: 16px; padding-right: 16px; }
+  .terminal{ padding: 18px 16px; }
 }
 
 @media (max-width: 680px){
+  .tabbar-inner{ padding: 0 14px; }
+  .tabbar-brand{ font-size: 0.78rem; }
   .tab-toggle{ display:flex; }
   .tabs{
     display:none;
@@ -481,4 +589,37 @@ a.cp-platform:hover{ color: var(--accent-blue); text-decoration: none; }
   .tab{ padding: 14px 20px; border-bottom: 1px solid var(--border); }
   .tabbar{ position: sticky; }
   .tabbar-inner{ position: relative; }
+}
+
+@media (max-width: 480px){
+  body{ font-size: 15px; }
+  main{ padding: 20px 10px 10px; }
+  .panel{ border-radius: 4px; }
+  .panel-head{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+    padding: 9px 14px;
+  }
+  .hero-panel{ padding-bottom: 18px; }
+  .code-block{ padding: 16px 12px; }
+  .code-block code{ font-size: 0.78rem; line-height: 1.75; }
+  .ln{ margin-right: 8px; }
+  .hero-actions{ padding: 0 14px 18px; }
+  .btn{ flex: 1 1 100%; text-align: center; }
+  .about-copy,
+  .about-card,
+  .experience-card{ padding: 18px 16px; }
+  .info-row{ align-items: flex-start; flex-direction: column; gap: 2px; }
+  .info-row dd{ text-align: left; }
+  .experience-dates{ white-space: normal; }
+  .certification-top{ flex-direction: column; gap: 4px; }
+  .certification-date{ white-space: normal; }
+  .cp-grid{ grid-template-columns: 1fr; }
+  .cp-card{ padding: 18px 16px; }
+  .cp-rating{ font-size: 1.7rem; }
+  .project-top h3{ font-size: 1rem; }
+  .project-link{ display: block; line-height: 1.5; }
+  .terminal{ font-size: 0.78rem; overflow-x: auto; }
+  .site-footer{ padding: 16px 10px 32px; }
 }

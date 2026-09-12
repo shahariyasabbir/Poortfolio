@@ -27,6 +27,8 @@
     <nav class="tabs" id="tabs">
       <a class="tab" href="#hero"><span class="tab-name">home</span><span class="tab-ext">.js</span></a>
       <a class="tab" href="#about"><span class="tab-name">about</span><span class="tab-ext">.js</span></a>
+      <a class="tab" href="#experience"><span class="tab-name">experience</span><span class="tab-ext">.js</span></a>
+      <a class="tab" href="#certifications"><span class="tab-name">certifications</span><span class="tab-ext">.js</span></a>
       <a class="tab" href="#skills"><span class="tab-name">skills</span><span class="tab-ext">.json</span></a>
       <a class="tab" href="#projects"><span class="tab-name">projects</span><span class="tab-ext">.js</span></a>
       <a class="tab" href="#cp"><span class="tab-name">cp-stats</span><span class="tab-ext">.log</span></a>
@@ -51,8 +53,7 @@
 <span class="ln">5</span>  <span class="tok-prop">studying</span>: <span class="tok-str">"BSc in CSE, BAIUST"</span>,
 <span class="ln">6</span>  <span class="tok-prop">stack</span>: [<span class="tok-str">"React"</span>, <span class="tok-str">"Node.js"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"MongoDB"</span>],
 <span class="ln">7</span>  <span class="tok-prop">languages</span>: [<span class="tok-str">"C++"</span>, <span class="tok-str">"JavaScript"</span>],
-<span class="ln">8</span>  <span class="tok-prop">currentFocus</span>: <span class="tok-str" id="typedFocus"></span><span class="cursor">|</span>
-<span class="ln">9</span>};</code></pre>
+<span class="ln">8</span>};</code></pre>
     </div>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">view_projects()</a>
@@ -90,6 +91,24 @@
         </dl>
       </aside>
     </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">Experience.js</span>
+      <span class="panel-status">1 entry</span>
+    </div>
+    <div id="experienceContent"></div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="panel">
+    <div class="panel-head">
+      <span class="panel-file">Certifications.js</span>
+      <span class="panel-status" id="certificationsStatus">0 entries</span>
+    </div>
+    <div id="certificationsContent"></div>
   </section>
 
   <!-- ============ SKILLS ============ -->
@@ -130,7 +149,7 @@
   <section id="projects" class="panel">
     <div class="panel-head">
       <span class="panel-file">projects.js</span>
-      <span class="panel-status">6 entries</span>
+      <span class="panel-status">4 entries</span>
     </div>
     <div class="project-list">
 
@@ -160,6 +179,7 @@
         <p>A personal full-stack matrimony platform for finding compatible partners based on personal, educational, and family preferences — profile management, match search and filtering, interest requests, connection management, messaging, and a member dashboard.</p>
         <ul class="project-tags"><li>React</li><li>Vite</li><li>Tailwind CSS</li></ul>
         <a class="project-link" href="https://github.com/shahariyasabbir/matrimony" target="_blank" rel="noopener">github.com/shahariyasabbir/matrimony</a>
+        <a class="project-link project-live-link" href="https://boyss-bride.netlify.app/" target="_blank" rel="noopener">live link ↗</a>
       </article>
 
       <article class="project-card">
@@ -168,22 +188,7 @@
         </div>
         <p>A contract billing landing page, originally static, rebuilt as a componentized React application for easier maintenance and reuse.</p>
         <ul class="project-tags"><li>React</li><li>JavaScript</li></ul>
-      </article>
-
-      <article class="project-card">
-        <div class="project-top">
-          <h3>E-Commerce Admin Panel</h3>
-        </div>
-        <p>An admin dashboard for managing an online store — products, orders and users — backed by a Node.js/Express API with MongoDB and Mongoose schemas, plus CRUD flows end to end.</p>
-        <ul class="project-tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Mongoose</li></ul>
-      </article>
-
-      <article class="project-card">
-        <div class="project-top">
-          <h3>Run to the Masjid</h3>
-        </div>
-        <p>An Islamic-themed browser game built in React, exploring simple game-loop mechanics and state management outside of typical CRUD apps.</p>
-        <ul class="project-tags"><li>React</li><li>JavaScript</li></ul>
+        <a class="project-link project-live-link" href="https://shahariyasabbir.github.io/Brilliance/" target="_blank" rel="noopener">live link ↗</a>
       </article>
 
     </div>
@@ -252,5 +257,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script type="module" src="Experience.js"></script>
+<script type="module" src="Certifications.js"></script>
 </body>
 </html>

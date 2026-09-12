@@ -17,43 +17,6 @@ tabs?.addEventListener('click', (e) => {
 });
 
 // ---------------------------------------------------------------
-// One orchestrated moment: type out the "currentFocus" value once
-// on load. Respects prefers-reduced-motion.
-// ---------------------------------------------------------------
-const focusEl = document.getElementById('typedFocus');
-const phrases = [
-  'shipping full-stack side projects',
-  'FedDRL-IDS thesis work',
-  '300+ solved problems and counting',
-];
-
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function typeOnce(el, text, speed = 38) {
-  return new Promise((resolve) => {
-    let i = 0;
-    const tick = () => {
-      el.textContent = '"' + text.slice(0, i) + '"';
-      i++;
-      if (i <= text.length) {
-        setTimeout(tick, speed);
-      } else {
-        resolve();
-      }
-    };
-    tick();
-  });
-}
-
-if (focusEl) {
-  if (prefersReducedMotion) {
-    focusEl.textContent = '"' + phrases[0] + '"';
-  } else {
-    typeOnce(focusEl, phrases[0]);
-  }
-}
-
-// ---------------------------------------------------------------
 // Active tab highlight based on scroll position
 // ---------------------------------------------------------------
 const sections = document.querySelectorAll('main .panel[id]');
